@@ -1,139 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in | Mercedes-Benz</title>
+    <title>Prijava | Mazda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
 
-    <main>
+    <main class="page">
+        <div class="card">
+            <div class="logo">Mazda</div>
 
-        <!-- LEFT SIDE -->
-        <section>
+            <input class="radio" type="radio" name="tab" id="r-login" checked>
+            <input class="radio" type="radio" name="tab" id="r-signup">
 
-            <h1>Mercedes-Benz</h1>
+            <div class="tabs">
+                <label class="tab" for="r-login">Prijava</label>
+                <label class="tab" for="r-signup">Registracija</label>
+            </div>
 
-            <p>Welcome to your world</p>
+            <form id="login-form">
+                <p class="lead">Prosimo, vnesite svoj e-poštni naslov in geslo</p>
 
-            <h2>Designed around you.</h2>
+                <input type="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
+                <input type="password" placeholder="Geslo" aria-label="Geslo" autocomplete="current-password" required>
 
-            <p>
-                One account for your Mercedes-Benz experience.
-            </p>
-
-        </section>
-
-
-        <section>
-
-            <p>Mercedes me ID</p>
-
-            <h2>Sign in</h2>
-
-            <p>
-                Access your vehicle, services and connected experience.
-            </p>
-
-
-            <form>
-
-                <label for="email">
-                    Email address
-                </label>
-
-                <br>
-
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="name@example.com"
-                    required
-                >
-
-                <br><br>
-
-
-                <label for="password">
-                    Password
-                </label>
-
-                <br>
-
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    required
-                >
-
-                <br><br>
-
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="remember"
-                    >
-
-                    Stay signed in
-                </label>
-
-                <br><br>
-
-
-                <button type="button">
-                    Forgot password?
-                </button>
-
-                <br><br>
-
-
-                <button type="submit">
-                    Sign in
-                </button>
-
+                <button class="btn" type="submit">Prijava</button>
+                <a class="forgot" href="#">Ste pozabili geslo?</a>
             </form>
 
 
-            <hr>
+            <form id="signup-form">
+                <p class="lead">Izpolnite podatke za ustvarjanje računa</p>
 
+                <input type="text" placeholder="Ime" aria-label="Ime" autocomplete="given-name" required>
+                <input type="text" placeholder="Priimek" aria-label="Priimek" autocomplete="family-name" required>
+                <input type="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
+                <input type="password" placeholder="Geslo" aria-label="Geslo" autocomplete="new-password" minlength="8" required>
+                <input type="password" placeholder="Ponovite geslo" aria-label="Ponovite geslo" autocomplete="new-password" minlength="8" required>
 
-            <p>
-                NEW TO MERCEDES-BENZ?
-            </p>
+                <button class="btn" type="submit">Registracija</button>
+            </form>
 
-            <p>
-                Create your Mercedes me ID
-
-                <button type="button">
-                    Register
-                </button>
-            </p>
-
-
-            <footer>
-
-                <a href="#">
-                    Privacy
-                </a>
-
-                <a href="#">
-                    Legal notice
-                </a>
-
-                <a href="#">
-                    Cookie settings
-                </a>
-
-            </footer>
-
-        </section>
-
+            <p class="small">Z nadaljevanjem se strinjate s <a href="#">pogoji uporabe</a>.</p>
+        </div>
     </main>
 
 </body>
